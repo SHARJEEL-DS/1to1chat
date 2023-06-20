@@ -13,7 +13,16 @@ export default function Home() {
   const router = useRouter();
   // const [studentsData, setStudentsData] = useState([]);
 
+  useEffect(() => {
+    if(!sessionStorage.getItem("username")){
+      router.push('/auth/login')
+      // setUsername(sessionStorage.getItem("username"))
+    }
+    
+  }, [])
+  
 
+  
   // const [user] = useAuthState(auth);
   // console.log(user);
 
@@ -44,10 +53,9 @@ export default function Home() {
     //   </main>
     // </>
     <>
-    <div className='home'>
-    <div className="container">
-      <Sidebar/>
-      <Chat/>
+    <div >
+    <div >
+    welcome
     </div>
   </div>
     </>
